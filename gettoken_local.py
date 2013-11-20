@@ -1,5 +1,4 @@
 import requests
-import json
  
 consumer_key = "YOUR_CONSUMER_KEY"
 consumer_secret = "YOUR_CUSTOMER_SECRET"
@@ -16,4 +15,4 @@ r = requests.post("https://login.salesforce.com/services/oauth2/token",
 	headers={"Content-Type":"application/x-www-form-urlencoded"},
 	data=payload)
  
-print json.dumps(r.json)
+print r.content
